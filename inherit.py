@@ -17,6 +17,7 @@ class dog(animal):
     # Method overriding
     def speak(self):
         super().speak()
+        # if there is no name inside child class then using super it will not work one way is to call super().__init__(name) in child class constructor
         print(f"my name is {self.name}")         
 
 animal_obj=animal("cow")
