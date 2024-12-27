@@ -15,14 +15,39 @@ class chatapp:
                          5. Press any other key to logout ''')   
 
         if user_input=='1':
-            pass
+            self.signup()
         elif user_input=='2':
-            pass
+            self.login()
         elif user_input=='3':
             pass
         elif user_input=='4':
             pass
         else:
             exit()
+
+    def signup(self):
+        email=input("enter your email: ")
+        pwd=input("enter your password: ")   
+        self.username=email
+        self.password=pwd
+        print("You have signed up successfully !!")
+        print("\n")
+        self.menu()   
+
+    def login(self):
+        if self.username=='' and self.password=='':
+            print("First do signup !!")
+        else:
+            email=input("enter your email: ")
+            pwd=input("enter your password: ") 
+            if(self.username==email and self.password==pwd):
+                print("You have logged in successfully !!")
+                self.loggedin=True
+            else:
+                print("Invalid credentials !!")
+        print("\n")
+        self.menu()          
+
+
 
 obj=chatapp()
