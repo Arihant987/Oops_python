@@ -1,10 +1,31 @@
 # Basic Social Media platform
 class chatapp:
+
+    # Static attribute directly accesible by "class only"
+    __user_id=0
+
     def __init__(self):
+        self.__prvt="private attribute"
+        self.id=chatapp.__user_id
+        chatapp.__user_id+=1   
         self.username=''
         self.password=''
         self.loggedin=False
-        self.menu()
+        # self.menu()
+
+    # Getter and Setter  
+    @staticmethod
+    def get_id():
+        return chatapp.__user_id
+    
+    def set_id(value):
+        chatapp.__user_id=value
+
+    def get_name(self):
+        return self.__prvt
+    
+    def set_name(self,value):
+        self.__prvt=value
 
     def menu(self):
         user_input=input('''Welcome to Chatapp !! How would you like to proceed ?
@@ -70,4 +91,4 @@ class chatapp:
 
 
 
-obj=chatapp()
+# user=chatapp()

@@ -2,6 +2,7 @@
 class employee:
     # constructor
     def __init__(self):
+        self.__name="private"
         self.id=123
         self.salary=50000
         self.designation="Software Engineer"
@@ -13,6 +14,10 @@ class employee:
 
 # object/instance
 sam=employee()
-print(type(sam))
+sam.id=456
+sam.llm="Chatgpt"
+
 print(sam.id)
+# print(sam.__name) is a private variable
+print(sam._employee__name)
 sam.travel("Roorkee")
