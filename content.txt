@@ -7,4 +7,4 @@
 6) Static variable
 7) Inheritance
 8) Super can only be used inside child class not from main pov can not access attribute/variable
-
+9) Diamond Problem in inheritance only
