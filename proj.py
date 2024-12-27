@@ -19,9 +19,9 @@ class chatapp:
         elif user_input=='2':
             self.login()
         elif user_input=='3':
-            pass
+            self.write_post()
         elif user_input=='4':
-            pass
+            self.write_message()
         else:
             exit()
 
@@ -46,7 +46,27 @@ class chatapp:
             else:
                 print("Invalid credentials !!")
         print("\n")
-        self.menu()          
+        self.menu()
+
+    def write_post(self):
+        if(self.loggedin):
+            post=input("Write your post: ")
+            print(f"Your post is {post}")
+        else:
+            print("Please login first !!")
+        print("\n")
+        self.menu()  
+
+    def write_message(self):
+        if(self.loggedin):
+            friend=input("Enter your friend name: ")
+            message=input("Write your message: ")
+            print(f"Your message to {friend} is {message}")       
+
+        else:
+            print("Please login first !!")
+        print("\n")
+        self.menu()
 
 
 
