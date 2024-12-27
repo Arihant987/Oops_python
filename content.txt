@@ -1,1 +1,10 @@
-class and object(example)
+1) class and object(example)
+2) class has data/attribute and func()/methods
+3) Why python is called object oriented programming ?-> every ds is class or object only 
+# helpful in debugging
+4) Basic Chatapp proj
+5) Getter and Setter
+6) Static variable
+7) Inheritance
+8) Super can only be used inside child class not from main pov can not access attribute/variable
+
